@@ -1,0 +1,285 @@
+DATA DICTIONARY - UCI HAR Dataset Analysis 
+
+Starting Data Set Description:
+
+The starting dataset comes from the UCI Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
+
+The body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). The magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+Description of the Dataset xAgg (transformations on original UCI HAR Dataset):
+
+Combine the Test and Train datasets into one large dataset of all observations.
+Extracted only the mean() and std() calculations for each of the measurement variables (listed above).
+Attached a column of data to identify the Subject for which the data for each variable is captured.
+Attached a column of data to identify the Activity that the Subject is performing in each variable measurement.
+Labeled all variables with descriptive variable names.
+Reshaped dataset to calculate the average of each variable for each Subject (1 through 30) and each Activity (Laying, Sitting, Standing, Walking, WalkingDownstairs, WalkingUpstairs). 
+
+Variables in Dataset xAgg:
+
+Subject		
+	Volunteer performing activity, uniquely numbered 1 through 30.
+		1-30 
+
+Activity
+	Type of activity performed to gain each piece of data - 6 different activities in total for each Subject.
+		Laying
+		Sitting
+		Standing
+		Walking 
+		WalkingDownstairs
+		WalkingUpstairs
+ 	
+tBodyAcc_mean_X
+	Average of tBodyAcc_mean_X from the UCI HAR Dataset for each Subject and each Activity. Thirty observations per Activity, one per each Subject.
+
+tBodyAcc_mean_Y
+	Average of tBodyAcc_mean_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAcc_mean_Z
+	Average of tBodyAcc_mean_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tGravityAcc_mean_X
+	Average of tGravityAcc_mean_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tGravityAcc_mean_Y
+	Average of tGravityAcc_mean_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tGravityAcc_mean_Z           
+	Average of tGravityAcc_mean_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAccJerk_mean_X
+	Average of tBodyAccJerk_mean_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAccJerk_mean_Y         
+	Average of tBodyAccJerk_mean_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAccJerk_mean_Z
+	Average of tBodyAccJerk_mean_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyro_mean_X             
+	Average of tBodyGyro_mean_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyro_mean_Y
+	Average of tBodyGyro_mean_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyro_mean_Z             
+	Average of tBodyGyro_mean_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyroJerk_mean_X
+	Average of tBodyGyroJerk_mean_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyroJerk_mean_Y         
+	Average of tBodyGyroJerk_mean_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyroJerk_mean_Z
+	Average of tBodyGyroJerk_mean_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAccMag_mean             
+	Average of tBodyAccMag_mean from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tGravityAccMag_mean
+	Average of tGravityAccMag_mean from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAccJerkMag_mean         
+	Average of tBodyAccJerkMag_mean from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+	
+tBodyGyroMag_mean
+	Average of tBodyGyroMag_mean from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyroJerkMag_mean       
+	Average of tBodyGyroJerkMag_mean from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+	
+fBodyAcc_mean_X     
+	Average of fBodyAcc_mean_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+	
+fBodyAcc_mean_Y              
+	Average of fBodyAcc_mean_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAcc_mean_Z
+	Average of fBodyAcc_mean_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAcc_meanFreq_X          
+	Average of fBodyAcc_meanFreq_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAcc_meanFreq_Y
+	Average of fBodyAcc_meanFreq_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAcc_meanFreq_Z          
+	Average of fBodyAcc_meanFreq_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccJerk_mean_X
+	Average of fBodyAccJerk_mean_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccJerk_mean_Y          
+	Average of fBodyAccJerk_mean_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccJerk_mean_Z
+	Average of fBodyAccJerk_mean_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccJerk_meanFreq_X      
+	Average of fBodyAccJerk_meanFreq_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccJerk_meanFreq_Y
+	Average of fBodyAccJerk_meanFreq_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccJerk_meanFreq_Z      
+	Average of fBodyAccJerk_meanFreq_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyGyro_mean_X
+	Average of fBodyGyro_mean_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyGyro_mean_Y             
+	Average of fBodyGyro_mean_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyGyro_mean_Z
+	Average of fBodyGyro_mean_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyGyro_meanFreq_X         
+	Average of fBodyGyro_meanFreq_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyGyro_meanFreq_Y
+	Average of fBodyGyro_meanFreq_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyGyro_meanFreq_Z         
+	Average of fBodyGyro_meanFreq_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccMag_mean
+	Average of fBodyAccMag_mean from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccMag_meanFreq         
+	Average of fBodyAccMag_meanFreq from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+	
+fBodyBodyAccJerkMag_mean
+	Average of fBodyBodyAccJerkMag_mean from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyBodyAccJerkMag_meanFreq 
+	Average of fBodyBodyAccJerkMag_meanFreq from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyBodyGyroMag_mean
+	Average of fBodyBodyGyroMag_mean from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.	
+
+fBodyBodyGyroMag_meanFreq    
+	Average of fBodyBodyGyroMag_meanFreq from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyBodyGyroJerkMag_mean
+	Average of fBodyBodyGyroJerkMag_mean from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyBodyGyroJerkMag_meanFreq
+	Average of fBodyBodyGyroJerkMag_meanFreq from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAcc_std_X
+	Average of tBodyAcc_std_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAcc_std_Y               
+	Average of tBodyAcc_std_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAcc_std_Z
+	Average of tBodyAcc_std_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tGravityAcc_std_X            
+	Average of tGravityAcc_std_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tGravityAcc_std_Y
+	Average of tGravityAcc_std_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tGravityAcc_std_Z            
+	Average of tGravityAcc_std_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAccJerk_std_X
+	Average of tBodyAccJerk_std_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAccJerk_std_Y           
+	Average of tBodyAccJerk_std_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAccJerk_std_Z
+	Average of tBodyAccJerk_std_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.	
+
+tBodyGyro_std_X             
+	Average of tBodyGyro_std_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyro_std_Y
+	Average of tBodyGyro_std_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyro_std_Z 
+	Average of tBodyGyro_std_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+            
+tBodyGyroJerk_std_X
+	Average of tBodyGyroJerk_std_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyroJerk_std_Y          
+	Average of tBodyGyroJerk_std_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyGyroJerk_std_Z
+	Average of tBodyGyroJerk_std_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAccMag_std              
+	Average of tBodyAccMag_std from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tGravityAccMag_std            
+	Average of tGravityAccMag_std from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+tBodyAccJerkMag_std          
+	Average of tBodyAccJerkMag_std from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAcc_std_X                
+	Average of fBodyAcc_std_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAcc_std_Y               
+	Average of fBodyAcc_std_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAcc_std_Z                
+	Average of fBodyAcc_std_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccJerk_std_X           
+	Average of fBodyAccJerk_std_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccJerk_std_Y            
+	Average of fBodyAccJerk_std_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccJerk_std_Z           
+	Average of fBodyAccJerk_std_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyGyro_std_X               
+	Average of fBodyGyro_std_X from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyGyro_std_Y              
+	Average of fBodyGyro_std_Y from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyGyro_std_Z               
+	Average of fBodyGyro_std_Z from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyAccMag_std              
+	Average of fBodyAccMag_std from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyBodyAccJerkMag_std
+	Average of fBodyBodyAccJerkMag_std from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyBodyGyroMag_std         
+	Average of fBodyBodyGyroMag_std from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
+
+fBodyBodyGyroJerkMag_std
+	Average of fBodyBodyGyroJerkMag_std from the UCI HAR Dataset for each Subject and each Activity.Thirty observations per Activity, one per each Subject.
