@@ -55,5 +55,5 @@ The activities originally from the y dataset are renamed with descriptive activi
 
 The observation columns originally from the x dataset are renamed with descriptive, tidy variable names that identify the observation specifications (e.g. tBodyAcc_mean_X,tGravityAcc_mean_X, tBodyAccJerk_mean_X, etc).
 
-The dataset is reshaped into a tidy dataset with the average of each variable observation, by Subject and by Activity. 
+The dataset is reshaped into a tidy dataset with the average of each variable observation, by Subject and by Activity. Each row represents one unique Subject-Activity-average observation.
 
